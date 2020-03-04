@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+from hashlib import md5
+ 
+print ('flag{' + md5(b'LearnTheHashFunction').hexdigest() + '}')
