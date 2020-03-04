@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+import hashlib
+ 
+s = hashlib.sha256()
+s.update(b"ThisIsAMoreSecureHashFunction")
+m = hashlib.md5()
+m.update(s.hexdigest().encode('utf-8'))
+print("flag{"+m.hexdigest()+"}")
