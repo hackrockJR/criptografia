@@ -2,3 +2,26 @@
 from hashlib import md5
  
 print ('flag{' + md5(b'LearnTheHashFunction').hexdigest() + '}')
+
+calcular la cadena de texto cuyo hash md5 se corresponde con el siguiente: 54f662a095fa3d5fbbdaac72d176701b
+  
+Resolverlo con https://md5hashing.net/hash/md5
+   
+El segundo método es utilizar john o hashcat desde nuestra máquina con un diccionario, para esto se suele usar el rockyou.txt
+ 
+echo '54f662a095fa3d5fbbdaac72d176701b' > hash.txt
+hashcat -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
+
+o bien
+john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+
+Resultado> masterofpuppets
+
+ahora convertirlo a mayuscula>
+
+#!/usr/bin/python3
+import hashlib
+ 
+m = hashlib.md5()
+m.update('masterofpuppets'.upper().encode('utf-8'))
+print("flag{"+m.hexdigest()+"}")
