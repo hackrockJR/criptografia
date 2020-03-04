@@ -1,0 +1,49 @@
+>Hash MD5 Linux comand<
+
+linux$ md5sum // comando md5sum
+Genbeta Dev  //Ejemplo. 
+
+
+Verificar archivo con su MD5 
+
+linux$ md5sum HTML5.png
+
+
+
+kalilinux:#python3  //ejecutar kali linux 
+>>>from hashlib import md5 //Importar la libreria 
+ 
+>>>print ('flag{' + md5(b'LearnTheHashFunction').hexdigest() + '}') //ejecutar el cifrado MD5
+
+[Ctrl] [d] //Salir de la consola de python en linux
+
+
+>Romper HASH por fuerza bruta<
+
+Via web> 
+
+https://hashkiller.co.uk/Cracker
+
+via hacking tools>
+
+echo '54f662a095fa3d5fbbdaac72d176701b' > hash.txt
+
+ 
+> 
+john --format=Raw-MD5 --wordlist=rockyou.txt hash.txt  //aplicar en la carpeta usr/share/wordlists/
+
+masterofpuppets  // Resultado. 
+
+Decifrar ASCII //run module pyton en windows o compilar linea por linea en el shell de python. 
+
+msg = ''
+text = '080 097 115 115 119 111 114 100 032 112 097 114 097 032 115 117 112 101 114 097 114 032 101 108 032 114 101 116 111 058 032 084 104 101 065 083 067 073 073 084 097 098 108 101 033'
+for i in text.split(' '):
+msg += chr(int(i))
+print (msg)
+
+TheASCIITable!
+
+print ('flag{' + md5(b'TheASCIITable!').hexdigest() + '}')
+
+
