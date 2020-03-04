@@ -1,0 +1,7 @@
+Para pasar este reto deberás decodificar la siguiente cadena hexadecimal:
+50617373776f72643a2044346d7054686548337821
+
+#!/usr/bin/python3
+ 
+print(bytes.fromhex('50617373776f72643a2044346d7054686548337821').decode('utf-8'))
+#python 2 : print ('50617373776f72643a2044346d7054686548337821'.decode('hex'))
